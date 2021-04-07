@@ -35,6 +35,7 @@ class MyProfileFragment : Fragment() {
         }
     }
 
+    //닉네임을 받아왔다.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
