@@ -12,7 +12,7 @@ import com.nepplus.pizzaorderapplication_20210407.R
 import kotlinx.android.synthetic.main.fragment_my_profile.*
 
 class MyProfileFragment : Fragment() {
-
+    //닉네임을 가지러 간다는 것을 보여주는 고유숫자
     val REQ_FOR_NICKNAME = 1004
 
     override fun onCreateView(
@@ -30,12 +30,13 @@ class MyProfileFragment : Fragment() {
 
             val myIntent = Intent(activity, EditNicknameActivity::class.java)
 
+            //닉네임을 받아오기 위한 별도의 행동 - startActicityForResult
             startActivityForResult(myIntent,REQ_FOR_NICKNAME)
 
         }
     }
 
-    //닉네임을 받아왔다.
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
